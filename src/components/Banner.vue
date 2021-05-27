@@ -14,7 +14,16 @@
         props: ["src"],
         mounted() {
             $("div").on("scroll", function () {
+                var opacity = 60;
+
                 $(this).find(".banner img").css("margin-top", $(this).scrollTop() / 2);
+                if ($(this).scrollTop() > 60) {
+                    opacity = $(this).scrollTop();
+                } else {
+                    opacity = 60;
+                }
+
+                $(this).find(".banner .cover").css("opacity", opacity + "%");
             });
         }
     }
@@ -47,6 +56,7 @@
             position: absolute;
             top: 0px;
             left: 0px;
+            align-items: center;
         }
 
        .text {

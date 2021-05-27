@@ -22,8 +22,23 @@
         margin: 10px;
         font-size: 12px;
 
+        &.large {
+            padding: 12px 20px;
+            min-width: 120px;
+        }
+
+        &.ex-large {
+            padding: 15px 30px;
+            min-width: 200px;
+            font-size: 14px;
+        }
+
         &:hover {
             opacity: 80%;
+        }
+
+        &:active {
+            opacity: 60%;
         }
     }
 </style>

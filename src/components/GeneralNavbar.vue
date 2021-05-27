@@ -1,5 +1,5 @@
 <template>
-    <div class="generalNavbar">
+    <div class="GeneralNavbar">
         <div class="logo">
             <router-link to="/">{{ logo }}</router-link>
         </div>
@@ -17,7 +17,7 @@
 <style lang="less">
     @import "/public/StyleConfig";
 
-    .generalNavbar {
+    .GeneralNavbar {
         width: 100%;
         height: 50px;
         background: @level2;
@@ -26,6 +26,7 @@
         left: 0px;
         display: flex;
         align-items: center;
+        box-shadow: 0px -1px 5px #000;
         justify-content: flex-end;
 
         .logo {
@@ -54,6 +55,7 @@
                 text-decoration: none;
                 font-family: @mainFont;
                 opacity: 60%;
+                margin-top: 1px;
                 font-size: 13px;
                 transition-duration: 200ms;
                 padding: 11px 10px 10px 10px;

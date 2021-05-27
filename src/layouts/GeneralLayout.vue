@@ -18,31 +18,54 @@
             <slot></slot>
         </div>
 
-        Footer... Soon
-    </div>
+        <general-footer copyright="COPYRIGHT AETHER 2020 - 2021 | ALL RIGHTS RESERVED">
+            <div>
+                <h1>ABOUT US</h1>
 
-    <splash-screen ref="SplashScreen" />
+                <span>Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet Lorem ipsum dolor sit ammet </span>
+            </div>
+
+            <div>
+                <h1>QUICK LINKS</h1>
+
+                <div class="links">
+                    <router-link to="/">HOME</router-link>
+
+                    <router-link to="/">HOME</router-link>
+
+                    <router-link to="/">HOME</router-link>
+
+                    <router-link to="/">HOME</router-link>
+                </div>
+            </div>
+
+            <div>
+                <h1>HELP</h1>
+
+                <div class="links">
+                    <router-link to="/">TERMS OF SERVICE</router-link>
+
+                    <router-link to="/">PRIVACY POLICY</router-link>
+
+                    <router-link to="/">HOME</router-link>
+                </div>
+            </div>
+        </general-footer>
+    </div>
 </template>
 
 <script>
     import GeneralNavbar from "../components/GeneralNavbar.vue";
     import TextButton from "../components/TextButton.vue";
     import PrimaryButton from "../components/PrimaryButton.vue";
-    import SplashScreen from "../components/SplashScreen.vue";
+    import GeneralFooter from "../components/GeneralFooter.vue";
 
     export default {
         components: {
             GeneralNavbar,
             TextButton,
             PrimaryButton,
-            SplashScreen
-        },
-        mounted() {
-            this.$refs.SplashScreen.show();
-
-            $(document).ready(() => {
-                this.$refs.SplashScreen.hide();
-            });
+            GeneralFooter
         }
     }
 </script>
