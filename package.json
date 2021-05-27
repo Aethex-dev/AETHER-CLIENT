@@ -1,0 +1,24 @@
+{
+  "name": "VueJS-with-Vite",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "directory-tree": "^2.2.9",
+    "less": "^4.1.1",
+    "sass": "^1.34.0",
+    "scandir": "^0.1.2",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.1.2",
+    "@vue/compiler-sfc": "^3.0.5",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^11.1.1",
+    "vite": "^2.0.0-beta.50"
+  }
+}
