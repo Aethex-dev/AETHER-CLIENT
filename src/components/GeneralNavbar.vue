@@ -59,11 +59,11 @@
                 font-size: 13px;
                 transition-duration: 200ms;
                 padding: 11px 10px 10px 10px;
-                height: 50px;
+                height: 49px;
                 align-items: center;
                 justify-content: center;
                 display: flex;
-                border-bottom: 2px solid @level0;
+                border-bottom: 1px solid @level0;
 
                 &:hover {
                     opacity: 100%;
@@ -71,8 +71,9 @@
 
                 &.router-link-active {
                     color: @brandColor;
+                    pointer-events: none;
                     opacity: 100%;
-                    border-bottom: 2px solid @brandColor;
+                    border-bottom: 1px solid @brandColor;
                 }
             }
         }

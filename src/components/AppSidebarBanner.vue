@@ -10,6 +10,8 @@
         mounted() {
             $(this.$el).parent().on("scroll", function () {
                 $(this).find(".AppSidebarBanner img").css("margin-top", $(this).scrollTop());
+                var opacity = 150 - $(this).scrollTop();
+                $(this).find(".AppSidebarBanner img").css("opacity", opacity + "%");
             });
         }
     }
@@ -19,7 +21,7 @@
     @import "/public/StyleConfig";
 
     .AppSidebarBanner {
-        width: 250px;
+        width: 100%;
         height: 120px;
         overflow: hidden;
         display: flex;

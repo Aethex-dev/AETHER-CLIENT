@@ -12,25 +12,17 @@
             <app-sidebar-banner src="https://cdn.wallpapersafari.com/89/10/Cldnux.jpg"/>
 
             <div class="header">
-                <span>Test Server</span>
+                <i class="fal fa-check-square"></i><span>AETHER</span>
             </div>
 
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
-            <br><br><br><br><br><br><br>
+            <app-sidebar-channel href="/app">WELCOME</app-sidebar-channel>
         </div>
     </app-sidebar>
 
     <div class="AppLayout">
-        <div class="content"></div>
+        <div class="content">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -38,12 +30,14 @@
     import AppSidebar from "../components/AppSidebar.vue";
     import ServerGuildButton from "../components/ServerGuildButton.vue";
     import AppSidebarBanner from "../components/AppSidebarBanner.vue";
+    import AppSidebarChannel from "../components/AppSidebarChannel.vue";
 
     export default {
         components: {
             AppSidebar,
             ServerGuildButton,
-            AppSidebarBanner
+            AppSidebarBanner,
+            AppSidebarChannel
         }
     }
 </script>

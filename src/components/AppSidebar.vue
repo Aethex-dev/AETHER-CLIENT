@@ -32,6 +32,23 @@
             left: 60px;
             overflow-y: auto;
 
+            &::-webkit-scrollbar {
+                width: 3px;
+                height: 3px;
+            }
+            &::-webkit-scrollbar-track {
+                background: @level0;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: @level0;
+            } 
+
+            &:hover {
+                &::-webkit-scrollbar-thumb {
+                    background: @level11;
+                }
+            }
+
             .header {
                 color: @contrast;
                 width: 100%;
@@ -41,6 +58,11 @@
                 top: 0px;
                 font-family: @mainFont;
                 font-size: 13px;
+
+                i {
+                    margin-right: 5px;
+                    color: @brandColor;
+                }
             }
         }
     }

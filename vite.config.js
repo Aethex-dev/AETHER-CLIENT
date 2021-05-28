@@ -9,7 +9,7 @@ export default {
   server: {
     hmr: {
       port: 443,
-      overlay: false
+      overlay: true
     }
   }
 }
