@@ -1,15 +1,15 @@
 <template>
-    <general-layout>
-        APP
-    </general-layout>
+    <app-layout>
+        
+    </app-layout>
 </template>
 
 <script>
-    import GeneralLayout from "../layouts/GeneralLayout.vue";
+    import AppLayout from "../layouts/AppLayout.vue";
 
     export default {
         components: {
-            GeneralLayout
+            AppLayout
         }
     }
 </script>

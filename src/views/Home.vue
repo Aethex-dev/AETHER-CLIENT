@@ -1,8 +1,8 @@
 <template>
     <general-layout>
-        <banner src="https://www.windowscentral.com/sites/wpcentral.com/files/styles/large/public/field/image/2021/02/guilded-egg-nation-2.jpg">
+        <banner src="https://miro.medium.com/max/1600/1*BT6XcpcRF_ZJeAfXlefHBg.gif">
             <h1>AETHER</h1>
-            <span>It's time to drop Discord and get Aether!</span>
+            <span>It's time to connect! AETHER, a new way of connecting with friends!</span>
         </banner>
 
         <general-content-block>
@@ -17,24 +17,45 @@
             </div>
 
             <div class="row center">
-                <outline-button class="flex ex-large">LOGIN</outline-button>
+                <outline-button @click="this.$refs.LoginModal.show();" class="flex ex-large">LOGIN</outline-button>
 
-                <primary-button class="flex ex-large">REGISTER</primary-button>
+                <primary-button @click="this.$refs.RegisterModal.show();" class="flex ex-large">REGISTER</primary-button>
             </div>
         </general-content-block>
     </general-layout>
 
-    <modal ref="Modal">
+    <modal ref="LoginModal">
         <div class="header">
-            <span>NOTICE</span>
+            <span>LOGIN</span>
         </div>
 
         <div class="body">
-            <span>This website is not yet ready for use!</span>
+            <form-wrapper>
+                <div class="body">
+                    <form-input label="USERNAME OR EMAIL ADDRESS" type="text" />
+
+                    <form-input label="PASSWORD" type="password" />
+                </div>
+            </form-wrapper>
         </div>
 
         <div class="footer">
-            <text-button @click="$refs.Modal.close();">CANCEL</text-button>
+            <text-button @click="$refs.LoginModal.close();">CANCEL</text-button>
+            <primary-button>BAN</primary-button>
+        </div>
+    </modal>
+
+    <modal ref="RegisterModal">
+        <div class="header">
+            <span>REGISTER</span>
+        </div>
+
+        <div class="body">
+            <span>This website is not yet ready for use!This website is not yet ready for use!This website is not yet ready for use!This website is not yet ready for use!This website is not yet ready for use!</span>
+        </div>
+
+        <div class="footer">
+            <text-button @click="$refs.RegisterModal.close();">CANCEL</text-button>
             <primary-button>BAN</primary-button>
         </div>
     </modal>
@@ -48,6 +69,8 @@
     import Banner from "../components/Banner.vue";
     import GeneralContentBlock from "../components/GeneralContentBlock.vue";
     import Modal from "../components/Modal.vue";
+    import FormWrapper from "../components/FormWrapper.vue";
+    import FormInput from "../components/FormInput.vue";
 
     export default {
         components: {
@@ -57,7 +80,9 @@
             Banner,
             GeneralContentBlock,
             Modal,
-            TextButton
+            TextButton,
+            FormWrapper,
+            FormInput
         }
     }
 </script>

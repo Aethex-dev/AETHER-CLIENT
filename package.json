@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "directory-tree": "^2.2.9",
     "less": "^4.1.1",
     "sass": "^1.34.0",

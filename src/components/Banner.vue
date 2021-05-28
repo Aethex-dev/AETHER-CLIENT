@@ -14,16 +14,20 @@
         props: ["src"],
         mounted() {
             $("div").on("scroll", function () {
-                var opacity = 60;
+                var coverOpacity = 60;
+                var textOpacity = 100;
 
                 $(this).find(".banner img").css("margin-top", $(this).scrollTop() / 2);
-                if ($(this).scrollTop() > 60) {
-                    opacity = $(this).scrollTop();
-                } else {
-                    opacity = 60;
+                coverOpacity = 100 - $(this).scrollTop();
+                textOpacity = 100 - $(this).scrollTop();
+
+                if (coverOpacity > 60) {
+                    coverOpacity = 60;
                 }
 
-                $(this).find(".banner .cover").css("opacity", opacity + "%");
+                $(this).find(".banner .cover").css("opacity", coverOpacity + "%");
+                $(this).find(".banner h1, .banner span").css("opacity", textOpacity + "%");
+                $(this).find(".banner span").css("margin-top", $(this).scrollTop() * 4);
             });
         }
     }
@@ -80,8 +84,28 @@
            }
 
            span {
-
+               padding: 0px 20px;
+               text-align: center;
            }
        }
+
+       @media (max-width: 760px) {
+            height: 250px;
+            
+            .text {
+                h1 {
+                    font-size: 40px;
+                }
+
+                span {
+                    font-size: 11px;
+                }
+            }
+        }
+
+        @media (max-width: 540px) {
+            height: 200px;
+        }
+
     }
 </style>

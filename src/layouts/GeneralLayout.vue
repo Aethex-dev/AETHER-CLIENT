@@ -1,19 +1,5 @@
 <template>
-    <general-navbar logo="AETHER">
-        <div class="links">
-            <router-link to="/">HOME</router-link>
-
-            <router-link to="/about">ABOUT</router-link>
-        </div>
-
-        <div class="buttons">
-            <text-button>REGISTER</text-button>
-
-            <primary-button>LOGIN</primary-button>
-        </div>
-    </general-navbar>
-
-    <div class="body">
+    <div class="GeneralLayout">
         <div class="content">
             <slot></slot>
         </div>
@@ -52,18 +38,34 @@
             </div>
         </general-footer>
     </div>
+
+    <general-navbar logo="AETHER">
+        <div class="links">
+            <router-link to="/">HOME</router-link>
+
+            <router-link to="/app">APP</router-link>
+
+            <router-link to="/about">ABOUT</router-link>
+        </div>
+
+        <div class="buttons">
+            <outline-button>REGISTER</outline-button>
+
+            <primary-button>LOGIN</primary-button>
+        </div>
+    </general-navbar>
 </template>
 
 <script>
     import GeneralNavbar from "../components/GeneralNavbar.vue";
-    import TextButton from "../components/TextButton.vue";
+    import OutlineButton from "../components/OutlineButton.vue";
     import PrimaryButton from "../components/PrimaryButton.vue";
     import GeneralFooter from "../components/GeneralFooter.vue";
 
     export default {
         components: {
             GeneralNavbar,
-            TextButton,
+            OutlineButton,
             PrimaryButton,
             GeneralFooter
         }
@@ -73,7 +75,7 @@
 <style lang="less" scoped>
     @import "/public/StyleConfig";
 
-    .body {
+    .GeneralLayout {
         height: calc(100vh - 50px);
         margin-top: 50px;
         width: 100%;
