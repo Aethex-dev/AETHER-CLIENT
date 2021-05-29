@@ -67,9 +67,9 @@
 
     <div class="body">
       <span
-        >This website is not yet ready for use!This website is not yet ready for
-        use!This website is not yet ready for use!This website is not yet ready
-        for use!This website is not yet ready for use!</span
+        >This website is not yet ready for use! This website is not yet ready
+        for use! This website is not yet ready for use! This website is not yet
+        ready for use! This website is not yet ready for use!</span
       >
     </div>
 
