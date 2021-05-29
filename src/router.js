@@ -1,11 +1,13 @@
-import { createWebHistory, createRouter } from "vue-router";
+import {
+  createWebHistory,
+  createRouter
+} from "vue-router";
 import Home from "./views/Home.vue";
 import About from "./views/About.vue";
 import Invalid from "./views/Invalid.vue";
 import App from "./views/App.vue";
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Home",
     component: Home,
@@ -16,12 +18,12 @@ const routes = [
     component: About,
   },
   {
-      path: "/app:catchAll(.*)",
-      component: App
+    path: "/app:catchAll(.*)",
+    component: App
   },
   {
-      path: "/:catchAll(.*)",
-      component: Invalid
+    path: "/:catchAll(.*)",
+    component: Invalid
   }
 ];
 

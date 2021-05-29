@@ -1,4 +1,6 @@
-import { createApp } from 'vue';
+import {
+    createApp
+} from 'vue';
 import MainLayout from './MainLayout.vue';
 import router from './router';
 
