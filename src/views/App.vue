@@ -1,15 +1,13 @@
 <template>
-    <app-layout>
-        m
-    </app-layout>
+  <app-layout> m </app-layout>
 </template>
 
 <script>
-    import AppLayout from "../layouts/AppLayout.vue";
+import AppLayout from "../layouts/AppLayout.vue";
 
-    export default {
-        components: {
-            AppLayout
-        }
-    }
+export default {
+  components: {
+    AppLayout,
+  },
+};
 </script>

@@ -1,21 +1,21 @@
 <template>
-    <router-view />
-    <splash-screen ref="SplashScreen" />
+  <router-view />
+  <splash-screen ref="SplashScreen" />
 </template>
 
 <script>
-    import SplashScreen from "./components/SplashScreen.vue";
+import SplashScreen from "./components/SplashScreen.vue";
 
-    export default {
-        components: {
-            SplashScreen
-        },
-        mounted() {
-            this.$refs.SplashScreen.show();
+export default {
+  components: {
+    SplashScreen,
+  },
+  mounted() {
+    this.$refs.SplashScreen.show();
 
-            $(document).ready(() => {
-                this.$refs.SplashScreen.hide();
-            });
-        }
-    }
+    $(document).ready(() => {
+      this.$refs.SplashScreen.hide();
+    });
+  },
+};
 </script>
