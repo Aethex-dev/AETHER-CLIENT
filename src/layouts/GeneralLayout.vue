@@ -4,9 +4,7 @@
       <slot></slot>
     </div>
 
-    <general-footer
-      copyright="COPYRIGHT AETHER 2020 - 2021 | Licensed Under the "
-    >
+    <general-footer copyright="COPYRIGHT AETHER 2021 | All Rights Reserved. ">
       <div>
         <h1>ABOUT US</h1>
 
